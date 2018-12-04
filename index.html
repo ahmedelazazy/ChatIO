@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChatIO</title>
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron card card-block">
+        <div class="row">
+          <div class="col-12">
+            <h3>ChatIO</h3>
+            <hr />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row chat">
+              <div class="col-md-8">
+                <div class="jumbotron card card-block messages">
+                  <h6>Messages</h6>
+                  <hr />
+                  <ul id="messages" class="list-unstyled">
+                    <!-- <li class="list-item">Lorem ipsum dolor sit amet</li> -->
+                  </ul>
+                </div>
+
+                <form id="messageForm">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="message" placeholder="Say something..." />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+              </div>
+              <div class="col-md-4">
+                <div class="list-group" id="users">
+                  <!-- <a href="#" class="list-group-item list-group-item-action active">Users</a> -->
+                  <!-- <div class="list-group-item">John Doe</div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="login">
+              <form id="loginForm" class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal">What's your name?</h1>
+                <input type="text" id="name" class="form-control" placeholder="Your Name..." required autofocus />
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Enter Chat</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/jquery.min.js"></script>
+    <script src="/moment.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
